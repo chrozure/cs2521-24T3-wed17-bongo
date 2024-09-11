@@ -40,7 +40,14 @@ struct node *newNode(int val) {
 }
 
 int listSumWhile(struct node *n) {
-    return 0;
+    struct node *curr = n;
+    int sum = 0;
+    while (curr != NULL) {
+        sum += curr->value;
+        curr = curr->next;
+    }
+
+    return sum;
 }
 
 int listSumFor(struct node *n) {
