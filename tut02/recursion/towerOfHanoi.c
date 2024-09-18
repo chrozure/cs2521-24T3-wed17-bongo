@@ -10,6 +10,11 @@ int main(void) {
 }
 
 void solveHanoi(int numDisks, char *fromRod, char *toRod, char *otherRod) {
-    // move disk from fromRod to toRod
+    // base case - nothing left to move
+    if (numDisks == 0) return;
+
+    // recursive case - more than one disk
+    solveHanoi(numDisks - 1, fromRod, otherRod, toRod);
     printf("Move disk from rod %s to Rod %s\n", fromRod, toRod);
+    solveHanoi(numDisks - 1, otherRod, toRod, fromRod);
 }

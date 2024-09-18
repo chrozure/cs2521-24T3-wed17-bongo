@@ -33,6 +33,13 @@ void testListCountOdds(int values[], int size) {
 }
 
 int listCountOdds(struct node *list) {
-    // TODO
-    return 0;
+
+    // base case - empty list
+    if (list == NULL) return 0;
+
+    // recursive case - current value is odd
+    else if (list->value % 2 != 0) return 1 + listCountOdds(list->next);
+
+    // recursive case - current value is event
+    return listCountOdds(list->next);
 }
