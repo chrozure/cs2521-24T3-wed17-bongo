@@ -41,26 +41,3 @@ bool hasTwoSum (int a[], int n, int v) {
 
     return false;
 }
-
-
-
-
-for (int i = 0; i < n; i++) {
-    statement;                  // n
-}
-
-for (int j = 0; j < n; j++) {
-    for (int i = 0; i < n; i++) {
-        statement;              // n^2
-    }
-}
-
-steps: n + n^2
-        -> O(n^2)
-
-
-j =    0   1   2        n - 1
-steps: n + n + n + ...    n
-        n * n
-
-

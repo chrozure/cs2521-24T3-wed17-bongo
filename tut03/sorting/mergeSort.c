@@ -63,11 +63,12 @@ void merge(int A[], int lo, int mid, int hi) {
 
 
 /*
-A = { 1, 4, 5, 6, 7, 2, 3, 4, 7, 9 }
 merge(A, 0, 4, 9)
+A = { 1, 2, 3, 4, 4, 5, 6, 7, 7, 9 }
+           	         i	             j
 
-nitems =
-tmp =
-
+nitems = 10
+tmp = { 1, 2, 3, 4, 4, 5, 6, 7, 7, 9 }
+		                           k
 
 */

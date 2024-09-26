@@ -1,16 +1,20 @@
 Let's compare the performance of bubble sort vs insertion sort!
 
 Bubble Sort:
-    -
+    - Goes through the array, checking all the adjacent pairs.
+      Until the array is in sorted order:
+        If a pair is not in the correct order:
+          Swap them around
 
-    - Best case:
-    - Worst case:
+    - Best case: O(n)
+    - Worst case: O(n^2)
 
 Insertion sort:
-    -
+    - Split the array into a sorted an unsorted section.
+      As you move towards the right, insert each new element into its correct position
 
-    - Best case:
-    - Worst case:
+    - Best case: O(n)
+    - Worst case: O(n^2)
 
 
 1. Sorted input
