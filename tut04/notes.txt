@@ -12,27 +12,24 @@ Admin:
         looked at it yet so I won't talk too much about it today.
 
 
-
 ADTs:
     - An Abstract Data Type is a type of data type where you are given an interface that describes
         how to use it, without telling you how it is implemented "underneath the hood".
 
     - e.g. driving a car
-    - e.g.
+    - e.g. stacks and queues
 
     - Why is this useful?
-        -
-
-
-
+        - It lets us think about our programs at a "higher level"
+        - It helps us break down big problems into smaller ones
 
 
 BSTs:
     - Binary Search Trees are a new data type!
     - They aim to solve the problems that arrays
         and linked lists have:
-        -
-        -
+        - Arrays are hard to resize
+        - Linked lists do not have random access, so you cannot do binary search
 
 
 Assignment 1:

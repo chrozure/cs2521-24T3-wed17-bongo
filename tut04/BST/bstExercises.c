@@ -49,23 +49,49 @@ int main(void) {
 ///////////////////////////////////////////////////////
 
 int bstNumNodes(struct node *t) {
-    // TODO
-    return 0;
+    // base case - empty tree
+    if (t == NULL) return 0;
+
+    // recursvie case - node, and a left/right subtree
+    return 1 + bstNumNodes(t->left) + bstNumNodes(t->right);
 }
 
 int bstCountOdds(struct node *t) {
-    // TODO
-    return 0;
+    // base case - empty tree
+    if (t == NULL) return 0;
+
+    // recursvie case - root is even
+    if (t->value % 2 == 0) return bstCountOdds(t->left) + bstCountOdds(t->right);
+
+    // recursive case - root is odd
+    return 1 + bstCountOdds(t->left) + bstCountOdds(t->right);
 }
 
 int bstCountInternal(struct node *t) {
-    // TODO
-    return 0;
+    // base case - empty tree
+    if (t == NULL) return 0;
+
+    // base csae - "leaf" node
+    if (t->left == NULL && t->right == NULL) return 0;
+
+    // recursive case - internal node
+    return 1 + bstCountInternal(t->left) + bstCountInternal(t->right);
 }
 
 int bstHeight(struct node *t) {
-    // TODO
-    return 0;
+    // base case - empty tree
+    if (t == NULL) {
+		return -1;
+	}
+
+    // recursive case
+    int lh = bstHeight(t->left);
+    int rh = bstHeight(t->right);
+    if (lh > rh) {
+        return lh + 1;
+    } else {
+        return rh + 1;
+    }
 }
 
 int bstNodeLevel(struct node *t, int key) {
