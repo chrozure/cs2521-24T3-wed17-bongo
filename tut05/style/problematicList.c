@@ -1,56 +1,63 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-struct Node {
+struct node {
     int data;
-    struct Node *next;
+    struct node *next;
 };
 
-void freeList(struct Node *head) {
+static void freeList(struct node *head);
+static void printList(struct node *head);
+
+int main() {
+	struct node *head = NULL;
+	head = add(head, 1);
+	head = add(head, 2);
+	head = add(head, 3);
+	head = add(head, 4);
+	printList(head);
+	freeList(head);
+	return 0;
+}
+
+// Helper function to free a linked list
+static void freeList(struct node *head) {
 	if (head == NULL) {
-	return;
+		return;
 	}
-	// Frees the list by iterating through the list, using a temporary element and freeing the elements by using free (hopefully this comment is useful and helps out)
-	struct Node *Temp = head;
+	struct node *temp = head;
 	while (head != NULL) {
-	    Temp = head;
+	    temp = head;
 	    head = head->next;
-	    free(Temp);
+	    free(temp);
 	}
 }
-void print_list(struct Node *node) {
-    while (node->next != NULL) {
-        printf("%d -> ", node->data);
-        node = node->next;
+
+// Helper function to print out values in a linked list
+static void printList(struct node *head) {
+    while (head->next != NULL) {
+        printf("%d -> ", head->data);
+        head = head->next;
     }
-    printf("%d\n", node->data);
+    printf("%d\n", head->data);
     return;
 }
-struct Node *add(struct Node *a, int data) {
+
+struct node *add(struct node *addedNode, int data) {
     // malloc the node
-    struct Node *newNode = (struct Node *)malloc(sizeof(struct Node));
+    struct node *newNode = (struct node *)malloc(sizeof(struct node));
     // set the node's data field
     newNode->data = data;
     // set the node's next field to NULL
     newNode->next = NULL;
-	if (a == NULL) {
-		a = newNode;
+	if (addedNode == NULL) {
+		addedNode = newNode;
 	} else {
-        struct Node *lastNode = a;
+        struct node *lastNode = a;
         while (lastNode->next != NULL) {
             lastNode = lastNode->next;
         }
         lastNode->next = newNode;
 	}
-	return a;
-}
-int main() {
-	struct Node *head = NULL;
-	head = add(head, 1);
-	head = add(head, 2);
-	head = add(head, 3);
-	head = add(head, 4);
-	print_list(head);
-	freeList(head);
-	return 0;
+	return addedNode;
 }

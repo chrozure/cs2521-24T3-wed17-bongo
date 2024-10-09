@@ -2,3 +2,14 @@ hasTwoSum(A, v):
 	Input:  array A[0..n - 1] of integers
 	        integer v
 	Output: true if A contains two elements that sum to v, false otherwise
+
+	t = new AVL tree
+
+	for i = 0 up to n - 1 do
+		if (v - A[i]) is in t then
+			return true
+		end if
+		insert A[i] into t
+	end for
+
+	return false

@@ -2,9 +2,10 @@ Only a few days until flexi week!
 
 This week we will be looking at balancing BSTs, AVL trees and introducing graphs!
 
-AVL Trees may be useful for those trying to optimise their solutions for the assignment.
-Graphs are the second big topic for this course, and
-will be used in this week's lab, where you make your own budget Facebook!
+AVL Trees may be useful for those trying to do the later stages of the assignment.
+
+Graphs are the second big topic for this course, and will be used
+in this week's lab, where you make your own budget Facebook!
 
 Admin:
     - There is handmarking to be done for:
@@ -14,7 +15,6 @@ Admin:
     - Assignment 1 is due 8pm Monday of week 7.
         This is the last tutorial before it's due, so make sure to ask
         all your questions today, or post them on the forum :)
-
 
 
 
