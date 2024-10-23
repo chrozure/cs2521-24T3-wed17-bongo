@@ -1,8 +1,10 @@
 A connected graph is:
-    -
+    - For every pair of vertices (v, w), there exists a path
+        from v to w.
 
 A complete graph is:
-    -
+    - For every pair of vertices (v, w) there exists an edge
+        connecting v to w
 
 Which of these implications are true? How could you prove/disprove them?
     connected => complete?
