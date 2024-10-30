@@ -4,6 +4,7 @@
 #include "Graph.h"
 
 Set reachable(Graph g, Vertex src);
+static void dfs(Graph g, Set reached, Vertex src);
 
 int main(void) {
     Graph g = GraphNew(10);
@@ -42,5 +43,21 @@ int main(void) {
 }
 
 Set reachable(Graph g, Vertex src) {
-    return NULL;
+    Set reached = SetNew();
+    dfs(g, reached, src);
+    return reached;
+}
+
+// Recursive depth-first search
+static void dfs(Graph g, Set reached, Vertex src) {
+    // base case - src has already been reached
+    if (SetContains(reached, src)) return;
+
+    // recursive case - search through all the neighbours
+    SetAdd(reached, src);
+    for (Vertex w = 0; w < GraphNumVertices(g); w++) {
+        if (GraphIsAdjacent(g, src, w)) {
+            dfs(g, reached, w);
+        }
+    }
 }

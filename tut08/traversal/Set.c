@@ -3,6 +3,7 @@
 #include <stdlib.h>
 
 #include "Set.h"
+#include "Graph.h"
 
 struct listNode {
     Vertex v;

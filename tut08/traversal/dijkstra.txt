@@ -7,10 +7,10 @@ dijkstraSSSP(G, src):
 
     dist[src] = 0
     while vSet is not empty:
-    find vertex v in vSet such that dist[v] is minimal
-    remove v from vSet
-    for each edge (v, w, weight) in G:
-        relax along (v, w weight)
+        find vertex v in vSet such that dist[v] is minimal
+        remove v from vSet
+        for each edge (v, w, weight) in G:
+            relax along (v, w weight)
 
 Initialisation:
 vSet = { 0, 1, 2, 3, 4, 5, 6, 7 }
