@@ -21,8 +21,9 @@ int main(int argc, char *argv[]) {
 int hash(char *key, int N) {
 	int h = 0;
 	char *c;
-	for (c = key; *c != '\0'; c++) {
-		h = h + *c;
+	int i = 0;
+	for (c = key; *c != '\0'; c++, i++) {
+		h = h + *c * i;
 	}
 	return h % N;
 }

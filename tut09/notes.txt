@@ -33,10 +33,21 @@ Hash maps:
             zids = { "z12345", "z98765", "z11111", ... }
             marks = {   85,       57,       100,   ... }
 
-            and loop through both arrays when you want to find someone's marks
+            and loop through the zids array when you want to find someone's marks
 
         - What is bad about this implementation?
-            -
+            - Slow O(n) time complexity
+                - Could be fixed with sorting
+
+            - Not very cohesive
+                - Have an array of struct students
+
+            - marks = { { "z12345", 85 }, ... }
 
         - Idea:
+            It would be REALLY nice if we could have just an array of marks and go
+                marks["z12345"] = 100;
+
+            We can get around this with a hash function:
+                marks[hash("z12345", 10)] = 100;
 
