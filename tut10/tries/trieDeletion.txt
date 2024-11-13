@@ -1,4 +1,7 @@
 What are the two cases when deleting aword from a trie?
 How is each case handled?
 
+If the new word is a prefix of an existing word in the trie, then it won't require a new node to be added.
+The node representing the last character in the word will simply be turned into a finishing (red) node.
+
 
